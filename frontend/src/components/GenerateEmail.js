@@ -8,7 +8,7 @@ const GenerateEmail = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:9001/generate-email', formData);
+      const response = await axios.post('http://localhost:9002/generate-email', formData);
       setStatus('Email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
