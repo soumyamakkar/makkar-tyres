@@ -6,6 +6,18 @@ require('dotenv').config();
 const emailRouter=require('./routes/email');
 const app=express();
 const PORT=process.env.PORT||9002;
+
+const allowedOrigins = [
+    'https://makkar-tyres-lcp75gx51-soumya-makkars-projects.vercel.app',
+    'https://makkar-tyres.vercel.app' // Add more origins if needed
+  ];
+
+  app.use(cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
+    credentials: true // If you need to include cookies in requests
+  }));
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
