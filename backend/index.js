@@ -15,7 +15,6 @@ const allowedOrigins = [
   app.use(cors({
     origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
-    credentials: true // If you need to include cookies in requests
   }));
 
 app.use(cors());
