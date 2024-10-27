@@ -8,8 +8,8 @@ const app=express();
 const PORT=process.env.PORT||9002;
 
 const allowedOrigins = [
-    'https://makkar-tyres-lcp75gx51-soumya-makkars-projects.vercel.app',
-    'https://makkar-tyres.vercel.app' // Add more origins if needed
+    'https://makkar-tyres-lcp75gx51-soumya-makkars-projects.vercel.app/generate-email',
+    'https://makkar-tyres.vercel.app/generate-email' // Add more origins if needed
   ];
 
   app.use(cors({
