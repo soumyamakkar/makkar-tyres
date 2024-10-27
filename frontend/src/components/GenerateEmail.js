@@ -8,7 +8,7 @@ const GenerateEmail = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://makkar-tyres.onrender.com/generate-email', formData);
+      const response = await axios.post('https://makkar-tyres-backend.onrender.com/generate-email', formData);
       setStatus('Email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
