@@ -7,15 +7,7 @@ const emailRouter=require('./routes/email');
 const app=express();
 const PORT=process.env.PORT||9002;
 
-const allowedOrigins = [
-    'https://makkar-tyres-lcp75gx51-soumya-makkars-projects.vercel.app/generate-email',
-    'https://makkar-tyres.vercel.app/generate-email' // Add more origins if needed
-  ];
-
-  app.use(cors({
-    origin: allowedOrigins,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
-  }));
+app.use(cors());
 
 app.use(cors());
 app.use(express.json());
